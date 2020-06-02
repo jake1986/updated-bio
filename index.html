@@ -14,7 +14,8 @@
         margin-top: 10px;
         width: 300px;
         height: 220px;
-        
+        border: 2px black solid;
+
     }
 
 
@@ -95,6 +96,7 @@
 
     .navbar {
         background-color: #85144b;
+        border-bottom: 5px black solid;
     }
 
     #name:hover {
@@ -121,7 +123,7 @@
         }
 
         to {
-            background-color: lightskyblue;
+            background-color: #327da8;
         }
     }
 
@@ -133,7 +135,7 @@
     }
 
     body {
-        background-color: lightyellow;
+        background-color: #a83232;
     }
 
     h4 {
@@ -144,8 +146,9 @@
     .bio-section {
         border: lightgrey solid .5px;
         border-radius: 8px;
-        margin-top: 80px;
+        margin-top: 120px;
         background-color: whitesmoke;
+        border: 2px black solid;
     }
 
     .bio-text {
@@ -155,50 +158,49 @@
 
     .footer {
         width: 1440px;
-        margin-top: 150px;
-        background-color: cyan;
+        margin-top: 240px;
+        background-color: #327da8;
         text-align: center;
+        color: white;
+
     }
 </style>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a id="name" class="navbar-brand" href="#">Jake Rhoads</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">About <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
         </div>
-      </nav>
+    </nav>
     <div class="container bio-section">
         <div class="row">
             <div class="col-md-6 bio-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam quam quisquam, perferendis sint labore
-                possimus hic facere doloremque ab vitae recusandae aspernatur, delectus tempore maiores unde nihil,
-                architecto repellat dicta incidunt ut similique? Dolorem alias odio ratione laborum officia suscipit
-                voluptatem eaque recusandae? Assumenda commodi aspernatur corrupti, laudantium nam officia odio
-                voluptatem rerum et natus ad nobis. Illum asperiores atque perspiciatis repudiandae animi, pariatur
-                quis? Quas obcaecati vel ullam sit aperiam illum quaerat sunt, cupiditate laboriosam distinctio quis?
-                Ullam deleniti doloremque dolor. Neque, eaque? Ut repellat culpa necessitatibus recusandae magni
-                temporibus itaque sequi odio excepturi, accusamus in deleniti pariatur quis? Delectus, recusandae fugit
-                cupiditate quaerat nemo asperiores ad aliquam, mollitia impedit officiis nostrum odit repellat dolores
-                ab, tempore accusantium. Accusantium.
+                My name is Jake Rhoads. I have been a Spanish teacher in the Richmond and Hanover school system over the
+                past 3 years. I want to make the transition into programming, so I enrolled in this bootcamp. I would
+                like to do something in terms of developing foreign language learning apps, e.g. Babbel, Rosetta Stone,
+                DuoLingo, etc. Both of my parents live in Richmond and my brother Daniel lives in Spain with his wife
+                Silvia. They have lived there for the past 4 years. She is Italian and Daniel has been learning so that
+                they can speak in Italian from time to time. I love languages, so I took this on as a quarantine
+                challeng ontop of focusing on programming.
             </div>
             <div class="col-md-3 bio-image">
-                <img src="project-photos/IMG_8319.JPG"
-                    alt="chris griffin">
-                <caption>Picture of my brother Dan and my <strong>(in darker framed glasses)</strong></caption>
+                <img src="project-photos/IMG_8319.JPG" alt="chris griffin">
+                <caption>Picture of my brother Dan and I <strong>(in darker framed glasses)</strong></caption>
                 <!-- <p class="col-md-12"></p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam unde natus laborum itaque quasi
                     sapiente accusamus ipsum enim ex impedit.</p> -->
             </div>
@@ -212,11 +214,6 @@
         </div>
     </footer>
     <script>
-
-    // $("#name").on("click", function() {
-    //     console.log("clicked");
-    //     $("ul").show();
-    // });
 
     </script>
 </body>
