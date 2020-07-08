@@ -1,5 +1,3 @@
-// postVisitorInfo();
-
 function postVisitorInfo() {
 
     let storedInfo = JSON.parse(localStorage.getItem("visitorList"));
@@ -52,3 +50,4 @@ submitBtn.on("click", function (event) {
 
 })
 
+postVisitorInfo();
