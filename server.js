@@ -1,3 +1,6 @@
+// Working to create a MongoDB collection for this information in order for visitor data to 
+// to be saved when running through node at the localhost
+
 var http = require("http");
 var fs = require("fs");
 

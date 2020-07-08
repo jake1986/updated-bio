@@ -1,51 +1,54 @@
-let emailList = [];
+// postVisitorInfo();
 
-const sendAddressBtn = $("#send-address")
+function postVisitorInfo() {
 
-sendAddressBtn.on("click", function (event) {
-    event.preventDefault();
-    console.log("clicked");
-    let emailAddress = $("#email-input").val();
+    let storedInfo = JSON.parse(localStorage.getItem("visitorList"));
 
-    if (emailAddress === "") {
-        return;
-    }
-
-    emailList.push(emailAddress);
-    localStorage.setItem("emailList", JSON.stringify(emailList));
-})
-
-let nameList = [];
-
-const nameInputBtn = $("#send-name");
-
-nameInputBtn.on("click", function (event) {
-    event.preventDefault();
-
-    let visitorName = $("#name-input").val();
-
-    if (visitorName === "") {
-        return;
+    if (storedInfo !== null) {
+        visitorList = storedInfo;
     };
 
-    nameList.push(visitorName);
-    localStorage.setItem("nameList", JSON.stringify(nameList));
+    visitorList.map(visitor => {
+        $(".visitor-info").append(`
+        <div class="row">
+        <div class="email-div col-md-4">${visitor.visitorEmail}</div>
+        <div class="name-div col-md-4">${visitor.visitorName}</div>
+        <div class="comment-div col-md-4">${visitor.visitorComment}</div>
+    </div>
+        `)
+    })
 
-})
+}
 
-let commentList = [];
+let visitorList = [];
 
-const sendCommentBtn = $("#send-comment");
+const submitBtn = $("#send-comment");
 
-sendCommentBtn.on("click", function (event) {
+submitBtn.on("click", function (event) {
     event.preventDefault();
 
+    let email = $("#email-input").val();
+    let name = $("#name-input").val();
     let comment = $("#comment-input").val();
 
-    if (comment === "") {
+    if (!email) {
+        return;
+    } else if (!name) {
+        return;
+    } else if (!comment) {
         return;
     };
 
-    commentList.push(comment);
-    localStorage.setItem("commentList", JSON.stringify(commentList));
+    let visitorInfo = {
+        visitorEmail: email,
+        visitorName: name,
+        visitorComment: comment
+    };
+
+    visitorList.push(visitorInfo);
+    localStorage.setItem("visitorList", JSON.stringify(visitorList));
+
+    postVisitorInfo();
+
 })
+
